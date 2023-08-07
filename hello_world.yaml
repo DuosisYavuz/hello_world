@@ -6,4 +6,4 @@
     - name: Create a text file
       win_file:
         path: C:\path\to\your\file.txt  # Specify the path where you want to create the file
-        state: touch                  # Create an empty file
+        state: mkdir                  # Create an empty file
