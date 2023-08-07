@@ -2,7 +2,7 @@
 - name: Create Text File on Linux and Windows using AWX
   hosts: all
   vars:
-    ansible_remote_tmp: 'C:\Users\Administrator\.temp'
+    ansible_remote_tmp: 'C:/Users/Administrator/.temp'
 
   tasks:
     - name: Create a text file on Linux
