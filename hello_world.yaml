@@ -1,7 +1,9 @@
 ---
-- name: Hello World!
-  hosts: 192.168.1.138
+- name: Create Text File on Windows using AWX
+  hosts: all  # Replace with the name of your Windows host defined in AWX inventory
 
   tasks:
-  - name: Hello World!
-    shell: echo "Hi! AWX is working!" > kek1.txt
+    - name: Create a text file
+      win_file:
+        path: C:\path\to\your\file.txt  # Specify the path where you want to create the file
+        state: touch                  # Create an empty file
