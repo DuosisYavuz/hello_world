@@ -6,4 +6,4 @@
 
 
   - name: Hello World!
-    shell: echo "Hi! AWX is working!" > kek1.txt
+    shell: echoo "Hi! AWX is working!" > kek1.txt
