@@ -3,7 +3,5 @@
   hosts: all
 
   tasks:
-
-
   - name: Hello World!
-    shell: echoo "Hi! AWX is working!" > kek1.txt
+    shell: echo "Hi! AWX is working!" > kek1.txt
