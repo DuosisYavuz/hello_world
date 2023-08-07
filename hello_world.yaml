@@ -1,7 +1,13 @@
 ---
-- name: Create Text File on Windows using AWX
-  hosts: all  # Replace with the name of your Windows host defined in AWX inventory
+- name: Create Text File on Linux and Windows using AWX
+  hosts: all
+  tasks:
+    - name: Create a text file on Linux
+      hosts: 192.168.1.123  # Replace with the actual hostname or IP of the Linux machine
+      shell: echo "Hello World!" > ~/kekw.txt
 
+- name: Create a text file on Windows
+  hosts: 192.168.1.138  # Replace with the actual hostname or IP of the Windows machine
   tasks:
     - name: Create a text file
-      shell: echo "Hello World!" > ~/kekw.txt
+      win_shell: echo "Hello World!" > C:\Users\Administrator\kekw.txt
