@@ -4,4 +4,4 @@
 
   tasks:
     - name: Create a text file
-      shell: echo "Hello World!" > kekw.txt 
+      win_shell: echo "Hello World!" > C:\Users\Administrator\kekw.txt
