@@ -3,6 +3,11 @@
   hosts: all
 
   tasks:
+    - name: Set remote temporary directory
+      win_shell: |
+        $env:TMPDIR = "C:\temp"
+      delegate_to: localhost
+      
     - name: Create a text file on Linux
       shell: echo "Hello World!" > ~/kekw.txt
       when: "'192.168.1.123' in inventory_hostname"
