@@ -3,9 +3,9 @@
   hosts: all
 
   tasks:
-    - name: Create a text file on Linux hosts
+    - name: Create a text file on Debian hosts
       shell: echo "Hello World!" > ~/test_file.txt
-      when: "ansible_os_family == 'Linux'"
+      when: "ansible_os_family == 'Debian'"
 
     - name: Create a text file on Windows hosts
       win_shell: echo "Hello World!" > C:\Users\Administrator\tet_file.txt
