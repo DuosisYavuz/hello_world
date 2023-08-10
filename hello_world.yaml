@@ -9,4 +9,5 @@
 
     - name: Create a text file on Windows hosts
       win_shell: echo "Hello World!" > C:\Users\Administrator\tet_file.txt
+      ansible_connection: "winrm"
       when: "ansible_os_family == 'Windows'"
