@@ -3,10 +3,10 @@
   hosts: all
 
   tasks:
-    - name: Create a text file on Linux
+    - name: Create a text file on Linux hosts
       shell: echo "Hello World!" > ~/test_file.txt
       when: "ansible_os_family == 'Linux'"
 
-    - name: Create a text file on Windows
+    - name: Create a text file on Windows hosts
       win_shell: echo "Hello World!" > C:\Users\Administrator\tet_file.txt
       when: "ansible_os_family == 'Windows'"
