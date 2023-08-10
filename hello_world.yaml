@@ -5,8 +5,8 @@
   tasks:
     - name: Create a text file on Linux
       shell: echo "Hello World!" > ~/test_file.txt
-      when: "'192.168.1.123' in inventory_hostname"
+      when: "ansible_os_family == 'Linux'"
 
     - name: Create a text file on Windows
-      win_shell: echo "Hello World!" > C:\Users\Administrator\kekw.txt
-      when: "'192.168.1.138' in inventory_hostname"
+      win_shell: echo "Hello World!" > C:\Users\Administrator\tet_file.txt
+      when: "ansible_os_family == 'Windows'"
